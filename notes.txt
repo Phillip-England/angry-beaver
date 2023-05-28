@@ -1,0 +1,2 @@
+tailwind command for hot reload
+npx tailwindcss -i ./public/styles/input.css -o ./public/styles/output.css --watch

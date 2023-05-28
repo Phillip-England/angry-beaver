@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/output.css" />
+    <title>Sign Up</title>
+  </head>
+  <body>
+    {{template "nav_guest.html" .}}
+    <form class="mb-2 flex flex-col p-4" action="/signup" method="POST">
+      <h3 class="text-lg">Sign Up</h3>
+      {{ if ne .err_signup "" }}
+      <p class="mb-4 mt-2 text-sm text-red-500">{{ .err_signup }}</p>
+      {{ end }}
+      <label class="mb-1 text-sm">Email</label>
+      <input
+        class="mb-2 border p-1"
+        name="email"
+        type="email"
+        value="phillip@gmail.com"
+      />
+      <label class="mb-1 text-sm">Password</label>
+      <input
+        class="mb-4 border p-1"
+        name="password"
+        type="password"
+        value="password"
+      />
+      <input class="rounded border bg-main p-2" type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
+type="email"
